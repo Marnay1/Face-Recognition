@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+        <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1 id="welcome"> Welcome To The Face Recognition App</h1>
+        <br>
+        <br>
+        <div id="list">
+            <p>Father</p>
+            <br>
+            <p>Mother</p>
+            <br>
+            <p>Brother</p>
+        </div>
+        <div class="border" id="webcam" width="300px" height="300px"></div>
+        <br>
+        <div class="border" id="picture" width="300px" height="300px"></div>
+        <br>
+        <button onclick="capture()"> Capture Photo</button>
+        <br>
+        <br>
+        <button onclick="identify()"> Identify</button>
+        <h2 id="result"> This is:</h2>
+    </body>
+    <script src="main.js"></script>
+</html>
