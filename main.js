@@ -13,6 +13,7 @@ function capture(){
     });
 };
 console.log("ml5 version", ml5.version);
+classifier = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/mUN-jjUwf/model.json', modelLoaded);
 function modelLoaded(){
     console.log("Model loaded!");
 } 
@@ -30,4 +31,3 @@ function gotResult(error, results){
         document.getElementById("result_object_accuracy").innerHTML= results[0].confidence.toFixed(3);
     }
 }
-https://teachablemachine.withgoogle.com/models/mUN-jjUwf/
