@@ -9,7 +9,7 @@ Webcam.attach(camera);
 
 function capture(){
     Webcam.snap(function(data_uri){
-        document.getElementById("picture").innerHTML= '<img src="' + data_uri + '"/>';
+        document.getElementById("picture").innerHTML= '<img id="picture" src="' + data_uri + '"/>';
     });
 };
 console.log("ml5 version", ml5.version);
@@ -17,8 +17,8 @@ classifier = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models
 function modelLoaded(){
     console.log("Model loaded!");
 } 
-function check(){
-    img= document.getElementById('captured_image');
+function identify(){
+    img= document.getElementById('picture').src;
     classifier.classify(img, gotResult);
 }
 function gotResult(error, results){
